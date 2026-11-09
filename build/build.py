@@ -47,6 +47,7 @@ PARTNERS = [('GIS d.o.o.', 'Geodetske usluge', 'https://www.gis-osijek.com/', 'g
 NAV = [('Home', 'index.html'), ('O nama', 'index.html#o-nama'), ('Usluge', 'index.html#usluge'), ('Posebne usluge', 'index.html#posebne'),
        ('Lokacije', 'index.html#lokacije'), ('Kontakt', 'contact/index.html'), ('Blog', 'news/index.html')]
 LOCAL_IMG = set(os.listdir(IMG))
+POST_BY_SLUG = {po['slug']: po['path'].strip('/') for po in SRC['posts']}
 
 # ---------- html cleanup ----------
 def clean_body(html):
@@ -91,6 +92,7 @@ def rewrite_links(html, prefix):
             path, _, frag = u.partition('#'); path = path.strip('/')
             if path in ('', 'home', 'gis-geoinformacijski-sustavi', 'o-nama', 'usluge', 'kontakt'): tgt = 'index.html'
             elif path == 'news': tgt = 'news/index.html'
+            elif path in POST_BY_SLUG: tgt = POST_BY_SLUG[path] + '/index.html'
             else: tgt = path + '/index.html'
             return f'href="{prefix}{tgt}{"#" + frag if frag else ""}"'
         return m.group(0)
