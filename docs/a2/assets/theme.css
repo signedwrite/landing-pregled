@@ -1,0 +1,19 @@
+/* A2 – tamna: full-width photo hero with navy overlay, white type, dark number band */
+.v-a2 .hero{position:relative;grid-template-columns:1fr;min-height:640px;background:url(img/hero.jpg) center/cover no-repeat}
+.v-a2 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,32,70,.94) 0%,rgba(24,60,100,.82) 48%,rgba(0,120,152,.25) 100%)}
+.v-a2 .hero-img{display:none}
+.v-a2 .hero-copy{position:relative;max-width:1200px;margin:0 auto;width:100%;padding:110px 24px}
+.v-a2 .co-name{color:#fff}
+.v-a2 .co-long{background:linear-gradient(90deg,#5fe0ec,#9fd3ff);-webkit-background-clip:text;background-clip:text}
+.v-a2 .slogan{color:#d4e3f0}
+.v-a2 .hero .lead{color:#c8d7e6;max-width:560px}
+.v-a2 .hero-note{color:#d4e3f0}
+.v-a2 .hero .btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.v-a2 .hero .btn-line:hover{background:#fff;color:var(--navy)}
+.v-a2 .btn-call{background:var(--aqua);border-color:var(--aqua)}
+.v-a2 .numbers{background:var(--navy);border:0}
+.v-a2 .numbers li{border-left-color:var(--aqua)}
+.v-a2 .numbers strong{color:#fff;font-size:46px}
+.v-a2 .numbers span{color:#b4c3d6}
+.v-a2 .site-head{background:rgba(255,255,255,.97);backdrop-filter:blur(6px)}
+@media (max-width:900px){.v-a2 .hero{min-height:0}.v-a2 .hero-copy{padding:64px 20px}}
