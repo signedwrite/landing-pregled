@@ -35,8 +35,8 @@ SPECIAL_SLUGS = ['inzenjerska-geodezija', 'aerofotogrametrija-dron', '3d-lasersk
 SPECIAL = [dict(slug=sl, title=sentence(x['title']).replace('AEROFOTOGRAMETRIJA', 'Aerofotogrametrija'), text=ws(x['text'])) for sl, x in zip(SPECIAL_SLUGS, HOME['special'])]
 # price list exactly as provided by LAND ING
 PRICES = [('Elaborat upisa objekta', 'upis-objekta', 'od 500 €', '7-14 dana'), ('Parcelacija zemljišta', 'parcelacijski-elaborat', 'od 500 €', '14-21 dan'),
-          ('Etažiranje', 'etaziranje-objekata', 'od 400 €', '10-15 dana'), ('Iskolčenje građevine', None, 'od 300 €', '1-3 dana'),
-          ('Iskolčenje (određivanje) međe', None, 'od 200 €', '1-3 dana'), ('Geodetski elaborat za legalizaciju', 'geodetski-elaborat-za-legalizaciju', 'od 500 €', '5-10 dana')]
+          ('Etažiranje', 'etaziranje-objekata', 'od 400 €', '10-15 dana'), ('Iskolčenje građevine', None, 'od 250 €', '1-3 dana'),
+          ('Iskolčenje (određivanje) međe', None, 'od 200 €', '1-3 dana'), ('Geodetski elaborat za legalizaciju', 'geodetski-elaborat-za-legalizaciju', 'od 400 €', '5-10 dana')]
 PRICE_NOTE = '* Navedene cijene su orijentacijske. Kontaktirajte nas za besplatnu ponudu prilagođenu vašem projektu.'
 LOCATIONS = [('geodet-osijek', 'Geodetske usluge Osijek', 'Pouzdane geodetske usluge za Slavoniju i Baranju'),
              ('geodet-zadar', 'Geodetske usluge Zadar', 'Stručne geodetske usluge za Zadarsku županiju'),
