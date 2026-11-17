@@ -1,0 +1,59 @@
+/* final A3 – 17 Nov */
+/* crisp logo lockup: image mark + live text (sharp at any resolution) */
+.brand-lock{display:flex;align-items:center;gap:12px;color:var(--ink)}
+.brand-lock img{height:46px;width:auto}
+.brand-txt{display:flex;flex-direction:column;line-height:1;font-family:Montserrat,"Hanken Grotesk",sans-serif}
+.brand-txt .b1{font-size:27px;font-weight:600;letter-spacing:.12em;background:linear-gradient(90deg,#00aebd 0%,#0b7d9a 55%,#26326e 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-txt .b2{font-size:9.6px;font-weight:600;letter-spacing:.39em;margin-top:6px;background:linear-gradient(90deg,#00aebd,#26326e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.site-foot .brand-txt .b1,.site-foot .brand-txt .b2{background:none;color:#fff}
+.site-foot .brand-lock img{height:44px;background:none;padding:0}
+.foot-brand .brand-lock{margin-bottom:14px}
+@media (max-width:980px){.brand-lock img{height:38px}.brand-txt .b1{font-size:22px}.brand-txt .b2{font-size:8px}}
+@media (max-width:380px){.brand-txt .b2{display:none}}
+
+/* language switch */
+.lang{display:inline-flex;gap:2px;margin-left:8px;border-left:1px solid rgba(255,255,255,.35);padding-left:14px}
+.lang a{font-weight:700;font-size:12.5px;padding:3px 7px;border-radius:5px;color:#d9e8f2}
+.lang a[aria-current]{background:#fff;color:var(--navy)}
+@media (max-width:700px){.tb-contact>a:first-child{display:none}.tb-contact{gap:12px}}
+
+/* hero photo with pickup + GNSS */
+.v-a3 .hero-img{background-image:url(img/hero-pickup.jpg);aspect-ratio:3/2}
+.hero-note{padding-left:0}
+
+/* social */
+.social{display:flex;gap:10px;align-items:center}
+.soc{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff}
+.soc:hover{color:#fff;filter:brightness(1.1)}
+.soc-off{background:#c9d6e2;cursor:default}
+.social-foot{margin-top:14px}.social-foot .soc{background:rgba(255,255,255,.14)}.social-foot .soc-off{opacity:.45}
+.info .info-social{grid-column:1/-1}
+
+/* locations */
+.loc-more{margin-top:40px;background:var(--soft);border-radius:18px;padding:28px 30px}
+.loc-more>p:first-child{font-weight:700;color:var(--ink);margin-bottom:16px}
+.chip-groups{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.chip-groups h3{font-size:15px;color:var(--teal);margin-bottom:10px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips a{display:inline-block;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:14.5px;color:var(--ink)}
+.chips a:hover{border-color:var(--aqua);color:var(--teal)}
+@media (max-width:700px){.chip-groups{grid-template-columns:1fr}}
+.loc-intro{padding-top:48px;padding-bottom:16px;max-width:860px}
+.loc-intro p{font-size:18px}
+.loc-cards .card{padding:26px}
+.loc-price{display:inline-block;margin-top:auto;font-weight:800;color:var(--teal);font-size:16px}
+.narrow{max-width:860px}
+.faq{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;color:var(--ink);font-size:17px}
+.faq p{padding:0 22px 20px;color:var(--text);line-height:1.7}
+.area-list{display:flex;flex-wrap:wrap;gap:8px}
+.area-list span{background:var(--soft);border-radius:999px;padding:6px 14px;font-weight:600;font-size:14.5px}
+.loc-index{padding:24px 24px 64px}
+.loc-index h2{margin:32px 0 16px;font-size:24px}
+.loc-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.loc-row{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;color:var(--ink);height:100%}
+.loc-row:hover{border-color:var(--aqua);color:var(--ink)}
+.loc-row span{font-size:14px;color:var(--text)}
+@media (max-width:900px){.loc-list{grid-template-columns:1fr 1fr}}@media (max-width:560px){.loc-list{grid-template-columns:1fr}}
+.brand-txt{white-space:nowrap}
+@media (max-width:520px){.brand-lock{gap:8px}.brand-lock img{height:30px}.brand-txt .b1{font-size:18px;letter-spacing:.1em}.brand-txt .b2{font-size:6.6px;letter-spacing:.36em;margin-top:4px}}

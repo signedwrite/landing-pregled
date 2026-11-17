@@ -13,5 +13,5 @@ document.querySelectorAll('.copy-btn').forEach(b=>b.addEventListener('click',asy
   const v=b.dataset.copy; let ok=false;
   try{await navigator.clipboard.writeText(v);ok=true;}catch(e){
     const r=document.createRange(); r.selectNodeContents(b.previousElementSibling); const s=getSelection(); s.removeAllRanges(); s.addRange(r); ok=document.execCommand&&document.execCommand('copy');}
-  const old=b.textContent; b.textContent=ok?'Kopirano ✓':'Označeno'; b.classList.add('done'); setTimeout(()=>{b.textContent=old;b.classList.remove('done');},1800);
+  const old=b.textContent; b.textContent=ok?(b.dataset.done||'✓'):'✓'; b.classList.add('done'); setTimeout(()=>{b.textContent=old;b.classList.remove('done');},1800);
 }));
