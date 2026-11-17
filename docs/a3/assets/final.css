@@ -17,8 +17,8 @@
 .lang a[aria-current]{background:#fff;color:var(--navy)}
 @media (max-width:700px){.tb-contact>a:first-child{display:none}.tb-contact{gap:12px}}
 
-/* hero photo with pickup + GNSS */
-.v-a3 .hero-img{background-image:url(img/hero-pickup.jpg);aspect-ratio:3/2}
+/* lower "Zašto mi?" photo: pickup + GNSS (replaces old car with odd plates); hero keeps the surveyor photo */
+.why-img{background-image:url(img/hero-pickup.jpg);background-position:center;min-height:0;aspect-ratio:3/2;align-self:center}
 .hero-note{padding-left:0}
 
 /* social */
