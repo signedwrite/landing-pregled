@@ -57,3 +57,15 @@
 @media (max-width:900px){.loc-list{grid-template-columns:1fr 1fr}}@media (max-width:560px){.loc-list{grid-template-columns:1fr}}
 .brand-txt{white-space:nowrap}
 @media (max-width:520px){.brand-lock{gap:8px}.brand-lock img{height:30px}.brand-txt .b1{font-size:18px;letter-spacing:.1em}.brand-txt .b2{font-size:6.6px;letter-spacing:.36em;margin-top:4px}}
+/* 17 Nov evening: original logo as one piece (vector), e-mail next to phone in sticky header */
+.brand-logo{display:flex;align-items:center}
+.brand-logo img{height:76px;width:auto;display:block}
+.site-foot .brand-logo img{height:100px;background:none;padding:0;border-radius:0}
+.head-actions{display:flex;gap:10px;align-items:center}
+.head-mail{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--teal);color:var(--teal);font-weight:800;font-size:16px;padding:10px 18px;border-radius:999px;white-space:nowrap}
+.head-mail:hover{background:var(--teal);color:#fff}
+.head-call{white-space:nowrap}
+#nav{gap:26px}
+@media (max-width:1280px){.head-mail span{display:none}.head-mail{padding:11px}}
+@media (max-width:980px){.brand-logo img{height:58px}.head-actions{margin-left:auto}.head-call{margin-left:0}}
+@media (max-width:420px){.brand-logo img{height:50px}.head-actions{gap:6px}}
