@@ -21,5 +21,5 @@
 .v-a3 .slogan{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(28px,2.8vw,38px);letter-spacing:.005em;line-height:1.2;background:none;border:0;padding:0;border-radius:0;position:relative;padding-left:22px;color:var(--teal)}
 .v-a3 .slogan::before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:5px;border-radius:3px;background:var(--grad)}
 .v-a3 .loc-img{height:210px}
-.v-a3 .loc-img[style*="osijek"]{background-position:center 72%}.v-a3 .loc-img[style*="biograd"]{background-position:center 55%}.v-a3 .loc-img{height:230px}
+.v-a3 .loc-img[style*="osijek"]{background-position:center center}.v-a3 .loc-img[style*="biograd"]{background-position:center 55%}.v-a3 .loc-img{height:230px}
 @media (max-width:900px){.v-a3 .hero-img{margin:0 16px}}
