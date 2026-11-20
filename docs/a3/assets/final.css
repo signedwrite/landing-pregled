@@ -76,3 +76,7 @@
 .cc-bar p{margin:0;font-size:14.5px;color:var(--text);flex:1 1 320px}.cc-bar a{color:var(--teal);font-weight:700}
 .cc-bar div{display:flex;gap:10px}.cc-bar .btn{padding:10px 18px;font-size:15px}
 @media (max-width:980px){.cc-bar{bottom:84px}}
+.law-table{width:100%;border-collapse:collapse;font-size:15px}
+.law-table th,.law-table td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.law-table th{background:#f4f6f8;font-weight:700}
+.law-table td:nth-child(2){white-space:nowrap;color:#555}
