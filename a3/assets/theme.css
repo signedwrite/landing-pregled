@@ -1,0 +1,25 @@
+/* A3 – gradijent: logo gradient hero with rounded photo card, number cards overlapping */
+.v-a3 .hero{background:linear-gradient(120deg,#e6f7f9 0%,#eef3fa 55%,#f6f8fc 100%);grid-template-columns:1.05fr .95fr;align-items:center;padding:0 0 56px}
+.v-a3 .hero-copy{padding-top:88px;padding-bottom:88px}
+.v-a3 .hero-img{min-height:480px;margin:56px max(24px,calc((100vw - 1200px)/2 + 24px)) 0 0;border-radius:24px;box-shadow:0 24px 60px rgba(20,40,74,.22);border:6px solid #fff}
+.v-a3 .co-name{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.v-a3 .co-long{background:none;color:var(--navy)}
+.v-a3 .slogan{display:inline-flex;align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:16px;color:var(--teal)}
+.v-a3 .btn{border-radius:999px}
+.v-a3 .numbers{border:0;margin-top:-56px;position:relative}
+.v-a3 .numbers ul{padding-top:0}
+.v-a3 .numbers li{background:#fff;border:0;border-radius:16px;padding:26px 24px;box-shadow:0 12px 32px rgba(20,40,74,.10);border-top:4px solid var(--aqua)}
+.v-a3 .numbers li:nth-child(2){border-top-color:#0888a0}.v-a3 .numbers li:nth-child(3){border-top-color:var(--blue)}.v-a3 .numbers li:nth-child(4){border-top-color:var(--navy)}
+.v-a3 .numbers strong{font-size:44px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.v-a3 .card,.v-a3 .loc,.v-a3 .post,.v-a3 .partner,.v-a3 .form,.v-a3 .table-wrap{border-radius:18px}
+.v-a3 .section.soft{background:linear-gradient(180deg,#f2f8fa,#f6f8fc)}
+.v-a3 .topbar{background:var(--grad)}
+@media (max-width:900px){.v-a3 .hero{grid-template-columns:1fr;padding-bottom:40px}.v-a3 .hero-copy{padding:56px 20px 24px}.v-a3 .hero-img{margin:0 16px;min-height:280px}.v-a3 .numbers{margin-top:0}.v-a3 .numbers ul{padding-top:32px}}
+/* 15 Nov: full photo (whole back of the surveyor with landing.hr), slogan styled */
+.v-a3 .hero-img{min-height:0;aspect-ratio:1024/724;align-self:center;background-size:cover;background-position:center}
+.v-a3 .co-name{font-size:clamp(46px,5.6vw,80px)}
+.v-a3 .slogan{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(28px,2.8vw,38px);letter-spacing:.005em;line-height:1.2;background:none;border:0;padding:0;border-radius:0;position:relative;padding-left:22px;color:var(--teal)}
+.v-a3 .slogan::before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:5px;border-radius:3px;background:var(--grad)}
+.v-a3 .loc-img{height:210px}
+.v-a3 .loc-img[style*="osijek"]{background-position:center center}.v-a3 .loc-img[style*="biograd"]{background-position:center 55%}.v-a3 .loc-img{height:230px}
+@media (max-width:900px){.v-a3 .hero-img{margin:0 16px}}
