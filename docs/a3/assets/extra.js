@@ -15,3 +15,27 @@ document.querySelectorAll('.copy-btn').forEach(b=>b.addEventListener('click',asy
     const r=document.createRange(); r.selectNodeContents(b.previousElementSibling); const s=getSelection(); s.removeAllRanges(); s.addRange(r); ok=document.execCommand&&document.execCommand('copy');}
   const old=b.textContent; b.textContent=ok?(b.dataset.done||'✓'):'✓'; b.classList.add('done'); setTimeout(()=>{b.textContent=old;b.classList.remove('done');},1800);
 }));
+/* Google recenzije: auto-rotacija + ručno listanje */
+(function(){
+  var t=document.querySelector('.rv-track'); if(!t) return;
+  var cards=t.children, timer, paused=false;
+  function step(){var c=cards[0]; return c ? c.getBoundingClientRect().width+18 : 300;}
+  function go(dir){
+    var max=t.scrollWidth-t.clientWidth-4;
+    if(dir>0 && t.scrollLeft>=max){t.scrollLeft=0;return;}
+    if(dir<0 && t.scrollLeft<=4){t.scrollLeft=t.scrollWidth;return;}
+    t.scrollBy({left:dir*step(),behavior:'smooth'});
+  }
+  var p=document.querySelector('.rv-prev'), n=document.querySelector('.rv-next');
+  if(p) p.addEventListener('click',function(){go(-1);restart();});
+  if(n) n.addEventListener('click',function(){go(1);restart();});
+  function start(){ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; timer=setInterval(function(){ if(!paused && !document.hidden) go(1); },5000); }
+  function restart(){clearInterval(timer);start();}
+  ['mouseenter','focusin','touchstart'].forEach(function(e){t.addEventListener(e,function(){paused=true;},{passive:true});});
+  ['mouseleave','focusout'].forEach(function(e){t.addEventListener(e,function(){paused=false;});});
+  t.addEventListener('touchend',function(){setTimeout(function(){paused=false;},6000);},{passive:true});
+  t.querySelectorAll('.rv-more').forEach(function(b){b.addEventListener('click',function(){
+    var c=b.closest('.rv-card'), o=c.classList.toggle('open'); b.textContent=o?b.dataset.less:b.dataset.more; b.setAttribute('aria-expanded',o); paused=o;
+  });});
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ if(!timer) start(); } }); }).observe(t); } else start();
+})();
