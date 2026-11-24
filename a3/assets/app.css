@@ -447,3 +447,4 @@ th{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
 :root{--muted:#5d6878}
 .foot-legal{font-size:12.5px;line-height:1.6;opacity:.85;flex-basis:100%}
 .foot-base a+a{margin-left:14px}
+@media (max-width:900px){.hero-img{background-image:url(img/hero-m.jpg)!important}.why-img{background-image:url(img/hero-pickup-m.jpg)!important}}
